@@ -1,8 +1,8 @@
 import os
 import streamlit as st
-from langchain_community.chat_models import ChatOpenAI
-from langchain_core.messages import SystemMessage, HumanMessage
 from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import SystemMessage, HumanMessage
 
 # 環境変数からAPIキーを読み込む
 load_dotenv()
