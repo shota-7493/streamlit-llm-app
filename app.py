@@ -7,7 +7,7 @@ from langchain_core.messages import SystemMessage, HumanMessage
 # 環境変数からAPIキーを読み込む
 load_dotenv()
 
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY")
 
 # OpenAI APIキーが設定されていない場合のエラーハンドリングを追加
 if not api_key:
